@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Copyright (c) 2015 All Right Reserved http://www.apache.org/licenses/-->
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Patrick Akaoui & Ryan Miller">
+  	<meta name="keywords" content="PC, Laptop, Shop, Buy, Sell, Account, New, Used, Trade, Money, Game, Gaming, Business, Work, School, Fun, Uni, Microsoft, Windows, Max, OSX, 8, 7, 10, xp, more">
+    <meta name="content-type" content="">
 
     <title>Shop Homepage - Start Bootstrap Template</title>
 
@@ -16,6 +18,9 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
+    
+    <!-- Login CSS -->
+    <link href="css/login-style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,6 +49,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">Home</a>
+                
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -61,10 +67,88 @@
                     <li>
                     	<a href="#">
                         Forums</a>
-                </ul>
+                  </li>
+                    <li>
+                    	<a href="mailto:support@millerprogramming.com?Subject=Support">
+                        Support</a>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        Button</a>
+                    </li>
+                    <li>
+                    	<a href="https://docs.google.com/forms/d/1K0AedmE2dSCS2K2vbUWrbHwxvAB0ZUlgzvIx-ojXrkA/viewform">
+                        Register</a>
+                    </li>
+              </ul>
+                                  <div>
+<!-- Authentication Begin -->
+  <script>
+function checkAuth(){
+var userName=document.getElementById('userName').value;
+var passWord=document.getElementById('passWord').value;
+//Account 1
+if(userName.toLowerCase()=="admin")
+{
+	if(passWord.toLowerCase()=="admin")
+	{
+		alert("Welcome Admin");
+		location.replace("page1.html")
+	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
+	}
+
+
+}
+//Account 2
+if(userName.toLowerCase()=="ryan")
+{
+	if(passWord.toLowerCase()=="miller")
+	{
+		alert("Welcome Ryan");
+	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
+	}
+
+}
+//Account 3
+if(userName.toLowerCase()=="patrick")
+{
+	if(passWord.toLowerCase()=="akaoui")
+	{
+		alert("Welcome Patrick");
+	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
+	}
+
+}
+//Account 4
+if(userName.toLowerCase()=="bowen")
+{
+	if(passWord.toLowerCase()=="bowen")
+	{
+		alert("Welcome Mr.Bowen");
+	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
+	}
+}
+document.getElementById('loginfield').innerHTML=userName;
+document.getElementById('loginfield').innerHTML=passWord;
+}
+
+
+</script>
+
+
+<div style="font-size:0%" ='loginfield'></div>
+<input type='text' id='userName' value="" placeholder="Username"/>
+
+<input type='password' id='passWord' value="" placeholder="Password"/>
+
+<input type='button' onclick='checkAuth()' value='Login'/>
+</div>
+                </div>
+
             </div>
+
+    <!-- Authentication End -->
             <!-- /.navbar-collapse -->
-        </div>
         <!-- /.container -->
     </nav>
 
@@ -239,75 +323,7 @@
                     </div>
                   
                 
-                  <div>
-                      <link rel="stylesheet" href="G:\HotLaptop\css\style.css">
-  <script>
-function checkAuth(){
-var userName=document.getElementById('userName').value;
-var passWord=document.getElementById('passWord').value;
-//Account 1
-if(userName.toLowerCase()=="admin")
-{
-	if(passWord.toLowerCase()=="admin")
-	{
-		alert("Welcome Admin");
-		location.replace("page1.html")
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
 
-
-}
-//Account 2
-if(userName.toLowerCase()=="ryan")
-{
-	if(passWord.toLowerCase()=="miller")
-	{
-		alert("Welcome Ryan");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-
-}
-//Account 3
-if(userName.toLowerCase()=="patrick")
-{
-	if(passWord.toLowerCase()=="akaoui")
-	{
-		alert("Welcome Patrick");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-
-}
-//Account 4
-if(userName.toLowerCase()=="bowen")
-{
-	if(passWord.toLowerCase()=="bowen")
-	{
-		alert("Welcome Mr.Bowen");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-}
-document.getElementById('loginfield').innerHTML=userName;
-document.getElementById('loginfield').innerHTML=passWord;
-}
-
-
-</script>
-
-
-<div style="font-size:0%" ='loginfield'></div>
-<input type='text' id='userName' value="" placeholder="Username"/>
-<br>
-<input type='password' id='passWord' value="" placeholder="Password"/>
-<br>
-<input type='button' onclick='checkAuth()' value='Login'/>
-</div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
     <!-- /.container -->
 
     <div class="container">
