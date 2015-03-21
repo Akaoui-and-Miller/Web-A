@@ -16,13 +16,13 @@
     <title>Shop Homepage - Start Bootstrap Template</title>
     <!-- TemplateEndEditable -->
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="../css/shop-homepage.css" rel="stylesheet">
+    <link href="/css/shop-homepage.css" rel="stylesheet">
     
     <!-- Login CSS -->
-    <link href="../css/login-style.css" rel="stylesheet">
+    <link href="/css/login-style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -81,9 +81,9 @@
                                   <div>
 <!-- Authentication Begin -->
 
-<script src="../js/checkAuth.js"></script>
-<script src="../js/checkUsername"></script>
-<script src="../js/Logout.js"></script>
+<script src="/js/checkAuth.js"></script>
+<script src="/js/checkUsername"></script>
+<script src="/js/Logout.js"></script>
 <script>
 function refresh(){
 	
