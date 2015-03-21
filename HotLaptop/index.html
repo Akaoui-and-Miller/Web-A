@@ -75,68 +75,22 @@
                         Support</a>
                     </li>
                     <li>
-                    	<a href="#">
-                        Button</a>
-                    </li>
-                    <li>
                     	<a href="https://docs.google.com/forms/d/1K0AedmE2dSCS2K2vbUWrbHwxvAB0ZUlgzvIx-ojXrkA/viewform">
                         Register</a>
                     </li>
               </ul>
                                   <div>
 <!-- Authentication Begin -->
-  <script>
-function checkAuth(){
-var userName=document.getElementById('userName').value;
-var passWord=document.getElementById('passWord').value;
-//Account 1
-if(userName.toLowerCase()=="admin")
-{
-	if(passWord.toLowerCase()=="admin")
-	{
-		alert("Welcome Admin");
-		location.replace("page1.html")
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
 
-
+<script src="js/checkAuth.js"></script>
+<script src="js/checkUsername"></script>
+<script src="js/Logout.js"></script>
+<script>
+function refresh(){
+	
+location.reload();
 }
-//Account 2
-if(userName.toLowerCase()=="ryan")
-{
-	if(passWord.toLowerCase()=="miller")
-	{
-		alert("Welcome Ryan");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-
-}
-//Account 3
-if(userName.toLowerCase()=="patrick")
-{
-	if(passWord.toLowerCase()=="akaoui")
-	{
-		alert("Welcome Patrick");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-
-}
-//Account 4
-if(userName.toLowerCase()=="bowen")
-{
-	if(passWord.toLowerCase()=="bowen")
-	{
-		alert("Welcome Mr.Bowen");
-	}else{ alert("Incorrect Password, if you beleive this is an error or if you have forgotten your login details please contact support@millerprogramming.com")
-	}
-}
-document.getElementById('loginfield').innerHTML=userName;
-document.getElementById('loginfield').innerHTML=passWord;
-}
-
-
 </script>
-
 
 <div style="font-size:0%" ='loginfield'></div>
 <input type='text' id='userName' value="" placeholder="Username"/>
@@ -144,6 +98,8 @@ document.getElementById('loginfield').innerHTML=passWord;
 <input type='password' id='passWord' value="" placeholder="Password"/>
 
 <input type='button' onclick='checkAuth()' value='Login'/>
+
+<input type='button' onclick='refresh()' value="Logout"/>
 </div>
                 </div>
 
