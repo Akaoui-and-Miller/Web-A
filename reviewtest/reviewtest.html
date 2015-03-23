@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!-- review custom CSS -->
+    <link href="css/reviewcss.css" rel="stylesheet" type="text/css">
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/reviewjs.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
+        });
+    </script>
+    
+</head>
+<body>
+<div class="container">
+	<div class="row" style="margin-top:40px;">
+		<div class="col-md-6">
+    	<div class="well well-sm">
+            <div class="text-right">
+                <a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Leave a Review</a>
+            </div>
+        
+            <div class="row" id="post-review-box" style="display:none;">
+                <div class="col-md-12">
+                    <form accept-charset="UTF-8" action="" method="post">
+                        <input id="ratings-hidden" name="rating" type="hidden"> 
+                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+        
+                        <div class="text-right">
+                            <div class="stars starrr" data-rating="0"></div>
+                            <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                            <span class="glyphicon glyphicon-remove"></span>Cancel</a>
+                            <button class="btn btn-success btn-lg" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+         
+		</div>
+	</div>
+</div>
+<script src="js/reviewimportant.js"></script>
+</body>
+</html>
