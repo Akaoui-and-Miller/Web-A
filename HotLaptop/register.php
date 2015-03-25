@@ -132,14 +132,6 @@ body,td,th {
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="assets/bootstrap.min.js"></script>
-    <link href="assets/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-        body { background: url(assets/bglight.png); }
-        .hero-unit { background-color: #fff; }
-        .center { display: block; margin: 0 auto; }
-    </style>
 </head>
 
 <body>
@@ -186,24 +178,27 @@ body,td,th {
                                   <div>
 <!-- Authentication Begin -->
 
-<script src="js/checkAuth.js"></script>
-<script src="/js/checkUsername.js"></script>
-<script src="js/Logout.js"></script>
-<script>
-function refresh(){
-	
-location.reload();
-}
-</script>
+        <ul class="nav pull-right">
+          <li><a href="register.php">Register</a></li>
+          <li class="divider-vertical"></li></ul>
+          <ul class="nav pull-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 15px;">
+                <form action="login.php" method="post"> 
+                    Username:<br /> 
+                    <input type="text" name="username" value="<?php echo $submitted_username; ?>" /> 
+                    <br /><br /> 
+                    Password:<br /> 
+                    <input type="password" name="password" value="" /> 
+                    <br /><br /> 
+                    <input type="submit" class="btn btn-info" value="Login" /> 
+                </form> 
+            </div>
+          </li>
+        </ul>
 
-<div style="font-size:0%" ='loginfield'></div>
-<input type='text' id='userName' value="" placeholder="Username"/>
 
-<input type='password' id='passWord' value="" placeholder="Password"/>
-
-<input type='button' onclick='checkAuth()' value='Login'/>
-
-<input type='button' onclick='refresh()' value="Logout"/>
                 </div>
 
             </div>
@@ -211,7 +206,7 @@ location.reload();
     <!-- Authentication End -->
             <!-- /.navbar-collapse -->
         <!-- /.container -->
-    </nav>
+   </nav>
 
     <!-- Page Content -->
     <div class="container">
@@ -231,35 +226,16 @@ location.reload();
 
    <div class="col-md-9">
    
-
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand">PHP Signup + Bootstrap Example</a>
-      <div class="nav-collapse">
-        <ul class="nav pull-right">
-          <li><a href="index.php">Return Home</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="container hero-unit">
     <h1>Register</h1> <br /><br />
     <form action="register.php" method="post"> 
-        <label>Username:</label> 
+        <label>Username: <strong style="color:darkred;">*</strong></label> 
         <input type="text" name="username" value="" /> 
         <label>Email: <strong style="color:darkred;">*</strong></label> 
         <input type="text" name="email" value="" /> 
-        <label>Password:</label> 
+        <label>Password: <strong style="color:darkred;">*</strong></label> 
         <input type="password" name="password" value="" /> <br /><br />
-        <p style="color:darkred;">* You may enter a false email address if desired. This demo database does not store addresses for purposes outside of this tutorial.</p><br />
+        <p style="color:darkred;">Fields with * next to them require you to fill them in.</p><br />
         <input type="submit" class="btn btn-info" value="Register" /> 
     </form>
 </div>

@@ -95,24 +95,26 @@ body,td,th {
                                   <div>
 <!-- Authentication Begin -->
 
-<script src="js/checkAuth.js"></script>
-<script src="/js/checkUsername.js"></script>
-<script src="js/Logout.js"></script>
-<script>
-function refresh(){
-	
-location.reload();
-}
-</script>
+        <ul class="nav pull-right">
+          <li><a href="register.php">Register</a></li>
+          <li class="divider-vertical"></li></ul>
+          <ul class="nav pull-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 15px;">
+                <form action="login.php" method="post"> 
+                    Username:<br /> 
+                    <input type="text" name="username" value="<?php echo $submitted_username; ?>" /> 
+                    <br /><br /> 
+                    Password:<br /> 
+                    <input type="password" name="password" value="" /> 
+                    <br /><br /> 
+                    <input type="submit" class="btn btn-info" value="Login" /> 
+                </form> 
+            </div>
+          </li>
+        </ul>
 
-<div style="font-size:0%" ='loginfield'></div>
-<input type='text' id='userName' value="" placeholder="Username"/>
-
-<input type='password' id='passWord' value="" placeholder="Password"/>
-
-<input type='button' onclick='checkAuth()' value='Login'/>
-
-<input type='button' onclick='refresh()' value="Logout"/>
                 </div>
 
             </div>
