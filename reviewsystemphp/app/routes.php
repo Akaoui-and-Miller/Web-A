@@ -1,7 +1,7 @@
 <?php
 
 // Route for Homepage - displays all products from the shop
-Route::get('/', function()
+Route::get('/index.html/', function()
 {
 	$products = Product::all();
 	return View::make('index', array('products'=>$products));
