@@ -123,9 +123,11 @@ body,td,th {
             <div class="col-md-3">
                 <p class="lead">HotLaptop</p>
                 <div class="list-group">
-                    <a href="Gaming.html" class="list-group-item">Gaming</a> <br>
-                    <a href="Business.html" class="list-group-item">Business</a> <br>
-                    <a href="Tablet.html" class="list-group-item">Tablets</a>
+                    <a href="#" class="list-group-item">Gaming</a> <br>
+                    <a href="#" class="list-group-item">Business</a> <br>
+                    <a href="#" class="list-group-item">Personal</a>
+                    <br>
+                    <a href="#" class="list-group-item">Tablets</a>
                 </div>
             </div>
             
@@ -261,12 +263,12 @@ body,td,th {
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="images/chrisicon.jpg">
+                            <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
-                              <h4 class="pull-right">$6000</h4>
-                                <h4><a href="Christine.html">PROJECT CHRISTINE</a>
+                                <h4 class="pull-right">$94.99</h4>
+                                <h4><a href="#">Fifth Product</a>
                                 </h4>
-                                <p>Only the most hardcore enthusiasts were able to take advantage of PC customizability. Convoluted hardware made it insane for the average person.</p>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
